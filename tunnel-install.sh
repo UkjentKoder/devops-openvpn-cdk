@@ -171,7 +171,7 @@ firezoneSetup() {
   echo "Creating admin..."
   $dc -f $installDir/docker-compose.yml run -e TELEMETRY_ID="${tid}" --rm firezone bin/create-or-reset-admin
   echo "Upping firezone services..."
-  $dc -f $installDir/docker-compose.yml up -d firezone caddy
+  $dc -f $installDir/docker-compose.yml up -d firezone caddy udp2raw
 
   displayLogo
 
