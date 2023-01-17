@@ -128,7 +128,7 @@ promptTelemetry() {
 firezoneSetup() {
   export FZ_INSTALL_DIR=$installDir
 
-  Build tunnel image from Dockerfile
+  # Build tunnel image from Dockerfile
   curl -fsSL https://raw.githubusercontent.com/wangyu-/udp2raw/unified/Dockerfile -o etc/udp2raw/Dockerfile
   docker build -t udp2raw etc/udp2raw
 
