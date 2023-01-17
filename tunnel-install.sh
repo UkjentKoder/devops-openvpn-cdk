@@ -129,8 +129,8 @@ firezoneSetup() {
   export FZ_INSTALL_DIR=$installDir
 
   # Build tunnel image from Dockerfile
-  curl -fsSL https://raw.githubusercontent.com/wangyu-/udp2raw/unified/Dockerfile -o etc/udp2raw/Dockerfile
-  docker build -t udp2raw etc/udp2raw
+  curl -fsSL https://raw.githubusercontent.com/wangyu-/udp2raw/unified/Dockerfile -o $installDir/udp2raw/Dockerfile
+  docker build -t udp2raw $installDir/udp2raw
 
   if ! test -f $installDir/docker-compose.yml; then
     os_type="$(uname -s)"
